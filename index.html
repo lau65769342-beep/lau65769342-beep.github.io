@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pulse Care — Fingertip Pulse Oximeter FS-20C</title>
+<style>
+  :root{
+    --ink:#12263a; --muted:#5b6b7c; --line:#e3e8ee;
+    --bg:#ffffff; --soft:#f6f8fa; --brand:#0070ba; --brand-dark:#003087;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Roboto,sans-serif;
+  }
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+  header{border-bottom:1px solid var(--line);padding:18px 0}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .logo{font-size:20px;font-weight:700;letter-spacing:-.01em}
+  .logo small{display:block;font-size:12px;font-weight:400;color:var(--muted);letter-spacing:0}
+  nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-size:14px}
+  nav a:hover{color:var(--brand)}
+
+  .hero{background:var(--soft);border-bottom:1px solid var(--line);padding:44px 0}
+  .hero h1{margin:0 0 10px;font-size:30px;line-height:1.3;letter-spacing:-.02em;max-width:22ch}
+  .hero p{margin:0;color:var(--muted);max-width:62ch}
+
+  .product{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:48px 0;align-items:start}
+  @media (max-width:760px){.product{grid-template-columns:1fr;gap:28px;padding:32px 0}}
+
+  .shot{border:1px solid var(--line);border-radius:10px;background:var(--soft);padding:24px}
+  .shot svg{width:100%;height:auto;display:block}
+  .thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+  .thumbs div{border:1px solid var(--line);border-radius:8px;background:var(--soft);padding:10px}
+  .thumbs svg{width:100%;height:auto;display:block}
+
+  h2{font-size:22px;margin:0 0 14px;letter-spacing:-.01em}
+  .product h2{font-size:26px;margin-bottom:8px}
+  .model{color:var(--muted);font-size:14px;margin:0 0 18px}
+
+  .price{font-size:32px;font-weight:700;margin:0 0 4px}
+  .price span{font-size:15px;font-weight:400;color:var(--muted)}
+  .stock{color:#1c7c3f;font-size:14px;margin:0 0 22px}
+
+  .btn{
+    display:block;width:100%;text-align:center;background:var(--brand);color:#fff;
+    text-decoration:none;font-weight:600;font-size:17px;padding:15px 20px;border-radius:26px;
+    transition:background .15s;
+  }
+  .btn:hover{background:var(--brand-dark)}
+  .btn-note{text-align:center;font-size:13px;color:var(--muted);margin:10px 0 0}
+
+  .pay{margin-top:26px;border:1px solid var(--line);border-radius:10px;padding:20px;background:var(--soft)}
+  .pay h3{margin:0 0 10px;font-size:16px}
+  .pay p{margin:0 0 10px;font-size:14px}
+  .pay-email{
+    font-size:19px;font-weight:700;letter-spacing:.01em;color:var(--brand-dark);
+    background:#fff;border:1px solid var(--line);border-radius:6px;
+    padding:11px 14px;word-break:break-all;
+  }
+  .pay-table{margin:0 0 12px;font-size:14px}
+  .pay-table th{width:38%;padding:8px 0;border-bottom:1px solid var(--line)}
+  .pay-table td{padding:8px 0;border-bottom:1px solid var(--line)}
+  .pay-warn{color:#8a4b1e}
+
+  .desc{margin-top:30px}
+  .desc h3{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 10px}
+  .desc ul{margin:0;padding-left:20px}
+  .desc li{margin-bottom:7px}
+
+  table{width:100%;border-collapse:collapse;margin-top:12px;font-size:15px}
+  th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{width:40%;color:var(--muted);font-weight:500}
+
+  section.block{padding:44px 0;border-top:1px solid var(--line)}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+  @media (max-width:760px){.cols{grid-template-columns:1fr;gap:24px}}
+
+  .notice{
+    background:#fff8e6;border:1px solid #f0dca6;border-radius:8px;
+    padding:14px 16px;font-size:14px;color:#6b5518;margin-top:26px
+  }
+
+  footer{background:var(--soft);border-top:1px solid var(--line);padding:34px 0;font-size:14px;color:var(--muted)}
+  footer p{margin:0 0 6px}
+  footer a{color:var(--brand)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo">
+      Pulse Care
+      <small>Home Medical Devices</small>
+    </div>
+    <nav>
+      <a href="#product">Product</a>
+      <a href="#specs">Specifications</a>
+      <a href="#shipping">Shipping</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>Fingertip Pulse Oximeter FS-20C</h1>
+    <p>Fast, non-invasive measurement of blood oxygen saturation (SpO₂) and pulse rate. Designed for home health monitoring, clinics, and sports use. Shipped worldwide from China.</p>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="product" id="product">
+    <div class="gallery">
+      <div class="shot">
+        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fingertip pulse oximeter, front view">
+          <rect x="70" y="95" width="230" height="115" rx="22" fill="#ffffff" stroke="#c9d3dd" stroke-width="2.5"/>
+          <path d="M300 118 q34 37 0 74" fill="none" stroke="#c9d3dd" stroke-width="2.5"/>
+          <rect x="96" y="120" width="122" height="66" rx="7" fill="#17202b"/>
+          <text x="112" y="152" fill="#37d67a" font-family="monospace" font-size="27" font-weight="bold">98</text>
+          <text x="158" y="152" fill="#37d67a" font-family="monospace" font-size="12">%SpO₂</text>
+          <text x="112" y="176" fill="#37d67a" font-family="monospace" font-size="19" font-weight="bold">72</text>
+          <text x="147" y="176" fill="#37d67a" font-family="monospace" font-size="11">bpm</text>
+          <path d="M196 172 l6-12 5 20 6-26 5 18 5-8" fill="none" stroke="#37d67a" stroke-width="1.8" stroke-linejoin="round"/>
+          <rect x="232" y="132" width="52" height="42" rx="6" fill="#eef2f6" stroke="#c9d3dd" stroke-width="1.5"/>
+          <circle cx="258" cy="153" r="9" fill="#dbe3ea"/>
+          <rect x="150" y="212" width="26" height="10" rx="3" fill="#c9d3dd"/>
+        </svg>
+      </div>
+      <div class="thumbs">
+        <div>
+          <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="In use on finger">
+            <path d="M14 62 q24-16 48-10 l30 8 v16 h-30 q-30 4-48-8 z" fill="#f2d9c6" stroke="#d9b79c" stroke-width="1.6"/>
+            <rect x="62" y="40" width="46" height="34" rx="8" fill="#ffffff" stroke="#c9d3dd" stroke-width="1.8"/>
+            <rect x="70" y="48" width="26" height="18" rx="3" fill="#17202b"/>
+            <text x="74" y="61" fill="#37d67a" font-family="monospace" font-size="10" font-weight="bold">98</text>
+          </svg>
+        </div>
+        <div>
+          <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Side view">
+            <path d="M22 40 h64 q16 0 16 14 v6 q0 14-16 14 h-64 q-8 0-8-8 v-18 q0-8 8-8 z" fill="#ffffff" stroke="#c9d3dd" stroke-width="1.8"/>
+            <rect x="30" y="48" width="40" height="20" rx="4" fill="#17202b"/>
+            <circle cx="86" cy="57" r="5" fill="#dbe3ea" stroke="#c9d3dd" stroke-width="1.2"/>
+          </svg>
+        </div>
+        <div>
+          <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Package contents">
+            <rect x="16" y="26" width="88" height="52" rx="6" fill="#ffffff" stroke="#c9d3dd" stroke-width="1.8"/>
+            <path d="M16 44 h88" stroke="#c9d3dd" stroke-width="1.4"/>
+            <rect x="28" y="54" width="30" height="16" rx="4" fill="#eef2f6" stroke="#c9d3dd" stroke-width="1.2"/>
+            <rect x="66" y="56" width="10" height="12" rx="2" fill="#dbe3ea"/>
+            <rect x="80" y="56" width="10" height="12" rx="2" fill="#dbe3ea"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="info">
+      <h2>Fingertip Pulse Oximeter</h2>
+      <p class="model">Model: FS-20C &nbsp;·&nbsp; SKU: PC-FS20C-WHT</p>
+
+      <p class="price">USD 15.90 <span>/ unit</span></p>
+      <p class="stock">In stock — ships within 2 business days</p>
+
+      <a class="btn" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=1504912826%40qq.com&amp;item_name=Fingertip%20Pulse%20Oximeter%20FS-20C&amp;item_number=PC-FS20C-WHT&amp;amount=15.90&amp;currency_code=USD&amp;no_shipping=2">Buy Now with PayPal</a>
+      <p class="btn-note">Secure checkout via PayPal · Buyer protection included</p>
+
+      <div class="pay">
+        <h3>Or pay directly to our PayPal account</h3>
+        <p>Open PayPal, choose <strong>Send &amp; Request</strong>, and send the payment to:</p>
+        <p class="pay-email">1504912826@qq.com</p>
+        <table class="pay-table">
+          <tr><th>Amount</th><td>USD 15.90 per unit</td></tr>
+          <tr><th>Payment type</th><td>Goods and Services</td></tr>
+          <tr><th>Note / message</th><td>SKU PC-FS20C-WHT + your full shipping address</td></tr>
+        </table>
+        <p class="pay-warn">Please select <strong>Goods and Services</strong>, not Friends and Family. Friends and Family transfers carry no buyer protection and cannot be used for purchases.</p>
+        <p>Once the payment shows in our account we will confirm your order by email and dispatch within 2 business days.</p>
+      </div>
+
+      <div class="desc">
+        <h3>Description</h3>
+        <p>The FS-20C is a compact fingertip pulse oximeter that measures blood oxygen saturation (SpO₂) and pulse rate in about eight seconds. Clip it onto a fingertip and the OLED display shows both readings together with a real-time plethysmograph waveform.</p>
+        <p>It is intended for spot-checking at home, in clinics, and during sports or high-altitude activity. The display rotates through four viewing directions, and the device switches off automatically when no finger is detected, so a set of batteries lasts through roughly 30 hours of measurement.</p>
+
+        <h3 style="margin-top:22px">Key Features</h3>
+        <ul>
+          <li>SpO₂ and pulse rate readings in approximately 8 seconds</li>
+          <li>OLED display with plethysmograph waveform and 4-direction rotation</li>
+          <li>One-button operation; automatic shut-off after 8 seconds without a finger</li>
+          <li>Low-battery indicator; runs on two AAA batteries</li>
+          <li>Fits finger widths from 8 mm to 25 mm — suitable for adults and older children</li>
+          <li>Weighs about 50 g without batteries; includes lanyard for portability</li>
+        </ul>
+      </div>
+
+      <div class="notice">
+        <strong>Important:</strong> This device is intended for spot-check measurement and general wellness monitoring. It is not a substitute for professional medical diagnosis. Readings may be affected by nail polish, cold fingers, poor circulation, or strong ambient light. Consult a healthcare professional about any medical concern.
+      </div>
+    </div>
+  </div>
+
+  <section class="block" id="specs">
+    <h2>Specifications</h2>
+    <table>
+      <tr><th>Product name</th><td>Fingertip Pulse Oximeter</td></tr>
+      <tr><th>Model number</th><td>FS-20C</td></tr>
+      <tr><th>SpO₂ measurement range</th><td>70% – 100%</td></tr>
+      <tr><th>SpO₂ accuracy</th><td>±2% (80% – 100%), ±3% (70% – 79%)</td></tr>
+      <tr><th>Pulse rate range</th><td>30 – 250 bpm</td></tr>
+      <tr><th>Pulse rate accuracy</th><td>±2 bpm or ±2%, whichever is greater</td></tr>
+      <tr><th>Display</th><td>OLED, 4-direction rotation, waveform included</td></tr>
+      <tr><th>Measurement time</th><td>Approx. 8 seconds</td></tr>
+      <tr><th>Power supply</th><td>2 × AAA alkaline batteries (included)</td></tr>
+      <tr><th>Battery life</th><td>Approx. 30 hours of continuous use</td></tr>
+      <tr><th>Auto power-off</th><td>After 8 seconds without a finger inserted</td></tr>
+      <tr><th>Suitable finger width</th><td>8 mm – 25 mm</td></tr>
+      <tr><th>Dimensions</th><td>58 × 32 × 34 mm</td></tr>
+      <tr><th>Net weight</th><td>Approx. 50 g (without batteries)</td></tr>
+      <tr><th>Operating environment</th><td>5 °C – 40 °C, 15% – 80% relative humidity</td></tr>
+      <tr><th>Housing material</th><td>ABS plastic, medical-grade silicone insert</td></tr>
+      <tr><th>Package contents</th><td>1 × oximeter, 2 × AAA batteries, 1 × lanyard, 1 × user manual (English)</td></tr>
+      <tr><th>Warranty</th><td>12 months against manufacturing defects</td></tr>
+    </table>
+  </section>
+
+  <section class="block" id="shipping">
+    <div class="cols">
+      <div>
+        <h2>Shipping</h2>
+        <p>Ships from China. Orders are dispatched within 2 business days of payment.</p>
+        <p><strong>Standard shipping — free worldwide.</strong> Estimated delivery 10 – 20 business days, tracking number provided.</p>
+        <p><strong>Express shipping (DHL / FedEx) — USD 18.00.</strong> Estimated delivery 5 – 8 business days. Contact us before ordering to arrange express delivery.</p>
+        <p>Import duties and taxes, where applicable, are the responsibility of the buyer.</p>
+      </div>
+      <div>
+        <h2>Returns &amp; Refunds</h2>
+        <p>Unused items in their original packaging may be returned within <strong>30 days of delivery</strong> for a full refund of the product price. Return shipping is paid by the buyer.</p>
+        <p>If the item arrives damaged, faulty, or is not what you ordered, email us within 7 days of delivery with photos. We will send a replacement or issue a full refund including shipping, at your choice.</p>
+        <p>Refunds are returned through PayPal to the original payment account within 5 business days of the returned item arriving.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="contact">
+    <h2>Contact</h2>
+    <div class="cols">
+      <div>
+        <p>Questions about the product, bulk pricing, express shipping, or an existing order — email us and we will reply within one business day.</p>
+      </div>
+      <div>
+        <p><strong>Email:</strong> <a href="mailto:1504912826@qq.com">1504912826@qq.com</a></p>
+        <p><strong>Business hours:</strong> Monday – Saturday, 09:00 – 18:00 (GMT+8)</p>
+        <p><strong>Languages:</strong> English, 中文</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Pulse Care. All rights reserved.</p>
+    <p>Payments processed securely by PayPal. This device is intended for wellness monitoring and spot-check measurement, not for continuous patient monitoring or clinical diagnosis.</p>
+  </div>
+</footer>
+
+</body>
+</html>
