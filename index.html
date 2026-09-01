@@ -1,273 +1,258 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pulse Care — Fingertip Pulse Oximeter FS-20C</title>
-<style>
-  :root{
-    --ink:#12263a; --muted:#5b6b7c; --line:#e3e8ee;
-    --bg:#ffffff; --soft:#f6f8fa; --brand:#0070ba; --brand-dark:#003087;
-  }
-  *{box-sizing:border-box}
-  body{
-    margin:0; background:var(--bg); color:var(--ink);
-    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Roboto,sans-serif;
-  }
-  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-
-  header{border-bottom:1px solid var(--line);padding:18px 0}
-  header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-  .logo{font-size:20px;font-weight:700;letter-spacing:-.01em}
-  .logo small{display:block;font-size:12px;font-weight:400;color:var(--muted);letter-spacing:0}
-  nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-size:14px}
-  nav a:hover{color:var(--brand)}
-
-  .hero{background:var(--soft);border-bottom:1px solid var(--line);padding:44px 0}
-  .hero h1{margin:0 0 10px;font-size:30px;line-height:1.3;letter-spacing:-.02em;max-width:22ch}
-  .hero p{margin:0;color:var(--muted);max-width:62ch}
-
-  .product{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:48px 0;align-items:start}
-  @media (max-width:760px){.product{grid-template-columns:1fr;gap:28px;padding:32px 0}}
-
-  .shot{border:1px solid var(--line);border-radius:10px;background:var(--soft);padding:24px}
-  .shot svg{width:100%;height:auto;display:block}
-  .thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
-  .thumbs div{border:1px solid var(--line);border-radius:8px;background:var(--soft);padding:10px}
-  .thumbs svg{width:100%;height:auto;display:block}
-
-  h2{font-size:22px;margin:0 0 14px;letter-spacing:-.01em}
-  .product h2{font-size:26px;margin-bottom:8px}
-  .model{color:var(--muted);font-size:14px;margin:0 0 18px}
-
-  .price{font-size:32px;font-weight:700;margin:0 0 4px}
-  .price span{font-size:15px;font-weight:400;color:var(--muted)}
-  .stock{color:#1c7c3f;font-size:14px;margin:0 0 22px}
-
-  .btn{
-    display:block;width:100%;text-align:center;background:var(--brand);color:#fff;
-    text-decoration:none;font-weight:600;font-size:17px;padding:15px 20px;border-radius:26px;
-    transition:background .15s;
-  }
-  .btn:hover{background:var(--brand-dark)}
-  .btn-note{text-align:center;font-size:13px;color:var(--muted);margin:10px 0 0}
-
-  .pay{margin-top:26px;border:1px solid var(--line);border-radius:10px;padding:20px;background:var(--soft)}
-  .pay h3{margin:0 0 10px;font-size:16px}
-  .pay p{margin:0 0 10px;font-size:14px}
-  .pay-email{
-    font-size:19px;font-weight:700;letter-spacing:.01em;color:var(--brand-dark);
-    background:#fff;border:1px solid var(--line);border-radius:6px;
-    padding:11px 14px;word-break:break-all;
-  }
-  .pay-table{margin:0 0 12px;font-size:14px}
-  .pay-table th{width:38%;padding:8px 0;border-bottom:1px solid var(--line)}
-  .pay-table td{padding:8px 0;border-bottom:1px solid var(--line)}
-  .pay-warn{color:#8a4b1e}
-
-  .desc{margin-top:30px}
-  .desc h3{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 10px}
-  .desc ul{margin:0;padding-left:20px}
-  .desc li{margin-bottom:7px}
-
-  table{width:100%;border-collapse:collapse;margin-top:12px;font-size:15px}
-  th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
-  th{width:40%;color:var(--muted);font-weight:500}
-
-  section.block{padding:44px 0;border-top:1px solid var(--line)}
-  .cols{display:grid;grid-template-columns:1fr 1fr;gap:36px}
-  @media (max-width:760px){.cols{grid-template-columns:1fr;gap:24px}}
-
-  .notice{
-    background:#fff8e6;border:1px solid #f0dca6;border-radius:8px;
-    padding:14px 16px;font-size:14px;color:#6b5518;margin-top:26px
-  }
-
-  footer{background:var(--soft);border-top:1px solid var(--line);padding:34px 0;font-size:14px;color:var(--muted)}
-  footer p{margin:0 0 6px}
-  footer a{color:var(--brand)}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="赵稳稳（Wenwen Zhao）的教育背景、学术成果与科研能力。">
+  <meta name="theme-color" content="#ffffff">
+  <title>赵稳稳 · Academic Profile</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="page-progress" aria-hidden="true"><span></span></div>
+  <div class="ambient ambient-a" aria-hidden="true"></div>
+  <div class="ambient ambient-b" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
 
-<header>
-  <div class="wrap">
-    <div class="logo">
-      Pulse Care
-      <small>Home Medical Devices</small>
+  <nav class="site-nav" aria-label="页面导航">
+    <a class="brand" href="#top" aria-label="回到顶部">
+      <span class="brand-mark">WZ</span>
+      <span>赵稳稳</span>
+    </a>
+    <div class="nav-links">
+      <a href="#education">教育</a>
+      <a href="#outputs">成果</a>
+      <a href="#capabilities">能力</a>
     </div>
-    <nav>
-      <a href="#product">Product</a>
-      <a href="#specs">Specifications</a>
-      <a href="#shipping">Shipping</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+    <span class="nav-year">PROFILE / 2026</span>
+  </nav>
 
-<div class="hero">
-  <div class="wrap">
-    <h1>Fingertip Pulse Oximeter FS-20C</h1>
-    <p>Fast, non-invasive measurement of blood oxygen saturation (SpO₂) and pulse rate. Designed for home health monitoring, clinics, and sports use. Shipped worldwide from China.</p>
-  </div>
-</div>
-
-<div class="wrap">
-
-  <div class="product" id="product">
-    <div class="gallery">
-      <div class="shot">
-        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fingertip pulse oximeter, front view">
-          <rect x="70" y="95" width="230" height="115" rx="22" fill="#ffffff" stroke="#c9d3dd" stroke-width="2.5"/>
-          <path d="M300 118 q34 37 0 74" fill="none" stroke="#c9d3dd" stroke-width="2.5"/>
-          <rect x="96" y="120" width="122" height="66" rx="7" fill="#17202b"/>
-          <text x="112" y="152" fill="#37d67a" font-family="monospace" font-size="27" font-weight="bold">98</text>
-          <text x="158" y="152" fill="#37d67a" font-family="monospace" font-size="12">%SpO₂</text>
-          <text x="112" y="176" fill="#37d67a" font-family="monospace" font-size="19" font-weight="bold">72</text>
-          <text x="147" y="176" fill="#37d67a" font-family="monospace" font-size="11">bpm</text>
-          <path d="M196 172 l6-12 5 20 6-26 5 18 5-8" fill="none" stroke="#37d67a" stroke-width="1.8" stroke-linejoin="round"/>
-          <rect x="232" y="132" width="52" height="42" rx="6" fill="#eef2f6" stroke="#c9d3dd" stroke-width="1.5"/>
-          <circle cx="258" cy="153" r="9" fill="#dbe3ea"/>
-          <rect x="150" y="212" width="26" height="10" rx="3" fill="#c9d3dd"/>
-        </svg>
-      </div>
-      <div class="thumbs">
-        <div>
-          <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="In use on finger">
-            <path d="M14 62 q24-16 48-10 l30 8 v16 h-30 q-30 4-48-8 z" fill="#f2d9c6" stroke="#d9b79c" stroke-width="1.6"/>
-            <rect x="62" y="40" width="46" height="34" rx="8" fill="#ffffff" stroke="#c9d3dd" stroke-width="1.8"/>
-            <rect x="70" y="48" width="26" height="18" rx="3" fill="#17202b"/>
-            <text x="74" y="61" fill="#37d67a" font-family="monospace" font-size="10" font-weight="bold">98</text>
-          </svg>
+  <main id="top">
+    <header class="hero section-shell">
+      <div class="hero-copy" data-reveal>
+        <div class="kicker"><span></span> ACADEMIC PROFILE · 2026</div>
+        <h1>赵稳稳</h1>
+        <p class="latin-name">Wenwen Zhao</p>
+        <p class="hero-role">神经外科学硕士研究生</p>
+        <p class="hero-affiliation">山东第一医科大学附属省立医院<br>（山东省立医院）</p>
+        <div class="hero-tags" aria-label="研究方向">
+          <span>脑肿瘤免疫微环境</span>
+          <span>单细胞与空间转录组学</span>
+          <span>生物信息学</span>
         </div>
-        <div>
-          <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Side view">
-            <path d="M22 40 h64 q16 0 16 14 v6 q0 14-16 14 h-64 q-8 0-8-8 v-18 q0-8 8-8 z" fill="#ffffff" stroke="#c9d3dd" stroke-width="1.8"/>
-            <rect x="30" y="48" width="40" height="20" rx="4" fill="#17202b"/>
-            <circle cx="86" cy="57" r="5" fill="#dbe3ea" stroke="#c9d3dd" stroke-width="1.2"/>
-          </svg>
-        </div>
-        <div>
-          <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Package contents">
-            <rect x="16" y="26" width="88" height="52" rx="6" fill="#ffffff" stroke="#c9d3dd" stroke-width="1.8"/>
-            <path d="M16 44 h88" stroke="#c9d3dd" stroke-width="1.4"/>
-            <rect x="28" y="54" width="30" height="16" rx="4" fill="#eef2f6" stroke="#c9d3dd" stroke-width="1.2"/>
-            <rect x="66" y="56" width="10" height="12" rx="2" fill="#dbe3ea"/>
-            <rect x="80" y="56" width="10" height="12" rx="2" fill="#dbe3ea"/>
-          </svg>
+        <div class="hero-contact">
+          <a href="mailto:wenwenzhao0606@163.com">wenwenzhao0606@163.com</a>
+          <span>预计 2027.06 毕业</span>
         </div>
       </div>
-    </div>
 
-    <div class="info">
-      <h2>Fingertip Pulse Oximeter</h2>
-      <p class="model">Model: FS-20C &nbsp;·&nbsp; SKU: PC-FS20C-WHT</p>
+      <div class="hero-visual" data-reveal>
+        <div class="portrait-frame">
+          <img src="assets/profile.png" alt="赵稳稳肖像">
+          <div class="portrait-grid" aria-hidden="true"></div>
+          <span class="portrait-index">01 — PROFILE</span>
+        </div>
+      </div>
+    </header>
 
-      <p class="price">USD 15.90 <span>/ unit</span></p>
-      <p class="stock">In stock — ships within 2 business days</p>
+    <section id="education" class="section-shell education-section" data-reveal>
+      <div class="section-heading">
+        <span class="section-index">01</span>
+        <div>
+          <p>EDUCATION</p>
+          <h2>教育背景</h2>
+        </div>
+      </div>
+      <div class="education-track">
+        <article class="education-item current">
+          <span class="education-year">至 2027.06</span>
+          <div>
+            <p class="degree">硕士 · 神经外科学（学术学位）</p>
+            <h3>山东第一医科大学</h3>
+            <p>山东第一医科大学附属省立医院（山东省立医院）</p>
+          </div>
+          <span class="current-label">CURRENT</span>
+        </article>
+        <article class="education-item">
+          <span class="education-year">本科</span>
+          <div>
+            <p class="degree">临床医学</p>
+            <h3>石河子大学</h3>
+          </div>
+        </article>
+      </div>
+    </section>
 
-      <a class="btn" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=1504912826%40qq.com&amp;item_name=Fingertip%20Pulse%20Oximeter%20FS-20C&amp;item_number=PC-FS20C-WHT&amp;amount=15.90&amp;currency_code=USD&amp;no_shipping=2">Buy Now with PayPal</a>
-      <p class="btn-note">Secure checkout via PayPal · Buyer protection included</p>
-
-      <div class="pay">
-        <h3>Or pay directly to our PayPal account</h3>
-        <p>Open PayPal, choose <strong>Send &amp; Request</strong>, and send the payment to:</p>
-        <p class="pay-email">1504912826@qq.com</p>
-        <table class="pay-table">
-          <tr><th>Amount</th><td>USD 15.90 per unit</td></tr>
-          <tr><th>Payment type</th><td>Goods and Services</td></tr>
-          <tr><th>Note / message</th><td>SKU PC-FS20C-WHT + your full shipping address</td></tr>
-        </table>
-        <p class="pay-warn">Please select <strong>Goods and Services</strong>, not Friends and Family. Friends and Family transfers carry no buyer protection and cannot be used for purchases.</p>
-        <p>Once the payment shows in our account we will confirm your order by email and dispatch within 2 business days.</p>
+    <section id="outputs" class="section-shell outputs-section">
+      <div class="section-heading" data-reveal>
+        <span class="section-index">02</span>
+        <div>
+          <p>SELECTED OUTPUTS</p>
+          <h2>学术成果</h2>
+        </div>
+        <p class="heading-note">表格压缩信息，作者位次与成果状态优先呈现。</p>
       </div>
 
-      <div class="desc">
-        <h3>Description</h3>
-        <p>The FS-20C is a compact fingertip pulse oximeter that measures blood oxygen saturation (SpO₂) and pulse rate in about eight seconds. Clip it onto a fingertip and the OLED display shows both readings together with a real-time plethysmograph waveform.</p>
-        <p>It is intended for spot-checking at home, in clinics, and during sports or high-altitude activity. The display rotates through four viewing directions, and the device switches off automatically when no finger is detected, so a set of batteries lasts through roughly 30 hours of measurement.</p>
+      <div class="output-table" role="table" aria-label="学术成果表格" data-reveal>
+        <div class="output-head" role="row">
+          <span role="columnheader">状态</span>
+          <span role="columnheader">作者位次</span>
+          <span role="columnheader">成果</span>
+          <span role="columnheader">期刊</span>
+        </div>
 
-        <h3 style="margin-top:22px">Key Features</h3>
-        <ul>
-          <li>SpO₂ and pulse rate readings in approximately 8 seconds</li>
-          <li>OLED display with plethysmograph waveform and 4-direction rotation</li>
-          <li>One-button operation; automatic shut-off after 8 seconds without a finger</li>
-          <li>Low-battery indicator; runs on two AAA batteries</li>
-          <li>Fits finger widths from 8 mm to 25 mm — suitable for adults and older children</li>
-          <li>Weighs about 50 g without batteries; includes lanyard for portability</li>
-        </ul>
+        <article class="output-row hero-output" role="row">
+          <div class="status-cell" role="cell"><span class="status status-gold">2025 · 已发表</span></div>
+          <div class="contribution-cell" role="cell"><strong>共同第一作者</strong><small>第一位</small></div>
+          <div class="title-cell" role="cell">
+            <span class="spotlight-badge">ESI 高被引 · 全球前 1%</span>
+            <h3>Exploring tumor-associated macrophages in glioblastoma: from diversity to therapy</h3>
+            <div class="row-links"><a href="https://doi.org/10.1038/s41698-025-00920-x" target="_blank" rel="noopener noreferrer">DOI ↗</a><span>PMID 40316746</span></div>
+          </div>
+          <div class="venue-cell" role="cell"><em>npj Precision Oncology</em><div class="venue-metrics"><span>IF 9.9</span><span>Q1</span></div></div>
+        </article>
+
+        <article class="output-row" role="row">
+          <div class="status-cell" role="cell"><span class="status">2026 · 已发表</span></div>
+          <div class="contribution-cell" role="cell"><strong>共同第一作者</strong><small>第一位</small></div>
+          <div class="title-cell" role="cell"><h3>Decoding myeloid heterogeneity in glioblastoma: spatial insights from transcriptomics</h3><div class="row-links"><a href="https://doi.org/10.1186/s12967-026-07873-0" target="_blank" rel="noopener noreferrer">DOI ↗</a></div></div>
+          <div class="venue-cell" role="cell"><em>Journal of Translational Medicine</em><div class="venue-metrics"><span>IF 9.7</span><span>Q1</span></div></div>
+        </article>
+
+        <article class="output-row" role="row">
+          <div class="status-cell" role="cell"><span class="status status-teal">已接收</span></div>
+          <div class="contribution-cell" role="cell"><strong>共同第一作者</strong><small>第一位</small></div>
+          <div class="title-cell" role="cell"><h3>Interconnected Roles of Cellular Senescence and the Immune Microenvironment in Tumor Progression</h3></div>
+          <div class="venue-cell" role="cell"><em>Cell Death Discovery</em><div class="venue-metrics"><span>IF 10.4</span><span>Q1</span></div></div>
+        </article>
+
+        <article class="output-row" role="row">
+          <div class="status-cell" role="cell"><span class="status status-teal">已接收</span></div>
+          <div class="contribution-cell" role="cell"><strong>共同第一作者</strong><small>第二位</small></div>
+          <div class="title-cell" role="cell"><h3>Next-Generation Tumor Organoids: A Functional Integration Framework for Advancing Precision Oncology</h3></div>
+          <div class="venue-cell" role="cell"><em>Journal of Translational Medicine</em><div class="venue-metrics"><span>IF 9.7</span><span>Q1</span></div></div>
+        </article>
+
+        <article class="output-row priority-output" role="row">
+          <div class="status-cell" role="cell"><span class="status status-violet">待接收</span></div>
+          <div class="contribution-cell contribution-primary" role="cell"><strong>独立第一作者</strong><small>重点成果</small></div>
+          <div class="title-cell" role="cell"><span class="spotlight-badge spotlight-violet">INDEPENDENT FIRST AUTHOR</span><h3>脑肿瘤恶性细胞分子分型及关键调控轴研究</h3><p>多组学分析 + 湿实验验证</p></div>
+          <div class="venue-cell" role="cell"><em>Genes &amp; Diseases</em><div class="venue-metrics"><span>IF 14.6</span></div></div>
+        </article>
+
+        <article class="output-row" role="row">
+          <div class="status-cell" role="cell"><span class="status">在投</span></div>
+          <div class="contribution-cell" role="cell"><strong>共同第一作者</strong><small>第二位</small></div>
+          <div class="title-cell" role="cell"><h3>肿瘤微环境中铁死亡相关生态位重塑</h3><p>单细胞 + 空间转录组 + 实验验证</p></div>
+          <div class="venue-cell" role="cell"><em>Journal of Advanced Research</em><div class="venue-metrics"><span>IF 17.1</span></div></div>
+        </article>
+
+        <article class="output-row" role="row">
+          <div class="status-cell" role="cell"><span class="status">在投</span></div>
+          <div class="contribution-cell" role="cell"><strong>共同第一作者</strong><small>第一位</small></div>
+          <div class="title-cell" role="cell"><h3>肿瘤相关巨噬细胞关键信号轴解析</h3><p>含实验验证</p></div>
+          <div class="venue-cell" role="cell"><em>Cancer Communications</em><div class="venue-metrics"><span>IF 24.9</span></div></div>
+        </article>
+
+        <article class="output-row" role="row">
+          <div class="status-cell" role="cell"><span class="status">修回中</span></div>
+          <div class="contribution-cell" role="cell"><strong>第一作者</strong></div>
+          <div class="title-cell" role="cell"><h3>脑肿瘤相关综述</h3></div>
+          <div class="venue-cell" role="cell"><em>Genes &amp; Diseases</em><div class="venue-metrics"><span>IF 14.6</span></div></div>
+        </article>
+      </div>
+      <p class="status-boundary">状态说明：“待接收”表示已获原则接收，尚未取得正式接收函。</p>
+    </section>
+
+    <section id="capabilities" class="section-shell capabilities-section">
+      <div class="section-heading" data-reveal>
+        <span class="section-index">03</span>
+        <div>
+          <p>CAPABILITIES</p>
+          <h2>个人能力</h2>
+        </div>
+        <p class="heading-note">按真实工作链条展开，不使用空泛熟练度标签。</p>
       </div>
 
-      <div class="notice">
-        <strong>Important:</strong> This device is intended for spot-check measurement and general wellness monitoring. It is not a substitute for professional medical diagnosis. Readings may be affected by nail polish, cold fingers, poor circulation, or strong ambient light. Consult a healthcare professional about any medical concern.
+      <div class="capability-grid">
+        <article class="capability-card card-large" data-reveal>
+          <div class="card-top"><span>01</span><span class="card-icon">SC</span></div>
+          <h3>单细胞与空间组学</h3>
+          <p>能够从研究问题、样本设计和数据结构出发，独立规划单细胞与空间组学分析链条。覆盖原始矩阵检查、质量控制、样本级整合与批次校正，并对注释、分型和空间定位结果进行多证据复核。</p>
+          <ul>
+            <li>质量控制、双细胞识别与环境 RNA 影响评估</li>
+            <li>跨样本整合、批次校正与样本组成比较</li>
+            <li>基于 marker、差异表达和参考图谱的细胞注释</li>
+            <li>CNV 推断、恶性细胞识别与样本级结果复核</li>
+            <li>肿瘤亚型、NMF 与 metaprogram 稳定性分析</li>
+            <li>细胞通讯、拟时序、scATAC 与空间定位解释</li>
+          </ul>
+        </article>
+
+        <article class="capability-card" data-reveal>
+          <div class="card-top"><span>02</span><span class="card-icon">TX</span></div>
+          <h3>转录组与临床关联</h3>
+          <p>整合 TCGA、GEO、CGGA 等公共数据，完成差异表达、功能富集、生存与预后分析及免疫去卷积。</p>
+          <div class="micro-tags"><span>TCGA</span><span>GEO</span><span>CGGA</span><span>Survival</span></div>
+        </article>
+
+        <article class="capability-card" data-reveal>
+          <div class="card-top"><span>03</span><span class="card-icon">ST</span></div>
+          <h3>统计与遗传证据</h3>
+          <p>具备孟德尔随机化与共定位分析经验；可开展潜在剖面分析、量表信效度和心理测量学分析。</p>
+          <div class="micro-tags"><span>MR</span><span>Colocalization</span><span>LPA</span></div>
+        </article>
+
+        <article class="capability-card card-wide ai-card" data-reveal>
+          <div class="card-top"><span>04</span><span class="card-icon">AI</span></div>
+          <h3>AI 与 Agent 科研工作流</h3>
+          <p>长期构建并实际运行面向科研全流程的 AI Agent 工作体系。重点不在单次对话，而在任务分解、执行约束、证据核验和可重复交付。</p>
+          <div class="workflow-line" aria-label="AI 科研工作流">
+            <span>多模型分工</span><i></i><span>交叉核验</span><i></i><span>批量计算</span><i></i><span>结构化交付</span>
+          </div>
+          <ul class="two-column-list">
+            <li>按任务性质调度不同模型与执行渠道</li>
+            <li>封装单细胞、文献、写作和统计等能力模块</li>
+            <li>公共数据库获取、批量分析与结果过滤</li>
+            <li>文献核验、复杂文档处理与知识管理</li>
+            <li>本地大模型部署，支持数据不出域场景</li>
+            <li>Linux 服务器集群任务与计算环境管理</li>
+          </ul>
+        </article>
+
+        <article class="capability-card" data-reveal>
+          <div class="card-top"><span>05</span><span class="card-icon">FW</span></div>
+          <h3>科研全流程</h3>
+          <p>可独立推进选题、数据分析、图表制作、论文撰写、投稿及审稿意见回复，并在关键结论处保留证据边界。</p>
+        </article>
+
+        <article class="capability-card" data-reveal>
+          <div class="card-top"><span>06</span><span class="card-icon">DEV</span></div>
+          <h3>技术栈与实验</h3>
+          <p>R / Python 独立编程，Linux 服务器环境；使用 Seurat、Scanpy、ArchR 等工具链。具备基础湿实验能力。</p>
+          <div class="micro-tags"><span>R</span><span>Python</span><span>Linux</span><span>Seurat</span><span>Scanpy</span><span>ArchR</span></div>
+        </article>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <section class="block" id="specs">
-    <h2>Specifications</h2>
-    <table>
-      <tr><th>Product name</th><td>Fingertip Pulse Oximeter</td></tr>
-      <tr><th>Model number</th><td>FS-20C</td></tr>
-      <tr><th>SpO₂ measurement range</th><td>70% – 100%</td></tr>
-      <tr><th>SpO₂ accuracy</th><td>±2% (80% – 100%), ±3% (70% – 79%)</td></tr>
-      <tr><th>Pulse rate range</th><td>30 – 250 bpm</td></tr>
-      <tr><th>Pulse rate accuracy</th><td>±2 bpm or ±2%, whichever is greater</td></tr>
-      <tr><th>Display</th><td>OLED, 4-direction rotation, waveform included</td></tr>
-      <tr><th>Measurement time</th><td>Approx. 8 seconds</td></tr>
-      <tr><th>Power supply</th><td>2 × AAA alkaline batteries (included)</td></tr>
-      <tr><th>Battery life</th><td>Approx. 30 hours of continuous use</td></tr>
-      <tr><th>Auto power-off</th><td>After 8 seconds without a finger inserted</td></tr>
-      <tr><th>Suitable finger width</th><td>8 mm – 25 mm</td></tr>
-      <tr><th>Dimensions</th><td>58 × 32 × 34 mm</td></tr>
-      <tr><th>Net weight</th><td>Approx. 50 g (without batteries)</td></tr>
-      <tr><th>Operating environment</th><td>5 °C – 40 °C, 15% – 80% relative humidity</td></tr>
-      <tr><th>Housing material</th><td>ABS plastic, medical-grade silicone insert</td></tr>
-      <tr><th>Package contents</th><td>1 × oximeter, 2 × AAA batteries, 1 × lanyard, 1 × user manual (English)</td></tr>
-      <tr><th>Warranty</th><td>12 months against manufacturing defects</td></tr>
-    </table>
-  </section>
-
-  <section class="block" id="shipping">
-    <div class="cols">
+    <section class="section-shell closing-section" data-reveal>
       <div>
-        <h2>Shipping</h2>
-        <p>Ships from China. Orders are dispatched within 2 business days of payment.</p>
-        <p><strong>Standard shipping — free worldwide.</strong> Estimated delivery 10 – 20 business days, tracking number provided.</p>
-        <p><strong>Express shipping (DHL / FedEx) — USD 18.00.</strong> Estimated delivery 5 – 8 business days. Contact us before ordering to arrange express delivery.</p>
-        <p>Import duties and taxes, where applicable, are the responsibility of the buyer.</p>
+        <span>HONORS &amp; ADDITIONAL</span>
+        <h2>一等奖学金 · 优秀团干部<br>优秀学生 · 优秀志愿者</h2>
       </div>
-      <div>
-        <h2>Returns &amp; Refunds</h2>
-        <p>Unused items in their original packaging may be returned within <strong>30 days of delivery</strong> for a full refund of the product price. Return shipping is paid by the buyer.</p>
-        <p>If the item arrives damaged, faulty, or is not what you ordered, email us within 7 days of delivery with photos. We will send a replacement or issue a full refund including shipping, at your choice.</p>
-        <p>Refunds are returned through PayPal to the original payment account within 5 business days of the returned item arriving.</p>
+      <div class="closing-meta">
+        <p>中共党员</p>
+        <p>CET-6</p>
+        <p class="welcome-note">欢迎学术交流</p>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <section class="block" id="contact">
-    <h2>Contact</h2>
-    <div class="cols">
-      <div>
-        <p>Questions about the product, bulk pricing, express shipping, or an existing order — email us and we will reply within one business day.</p>
-      </div>
-      <div>
-        <p><strong>Email:</strong> <a href="mailto:1504912826@qq.com">1504912826@qq.com</a></p>
-        <p><strong>Business hours:</strong> Monday – Saturday, 09:00 – 18:00 (GMT+8)</p>
-        <p><strong>Languages:</strong> English, 中文</p>
-      </div>
-    </div>
-  </section>
+  <footer class="site-footer">
+    <span>赵稳稳 · WENWEN ZHAO</span>
+    <span>ACADEMIC PROFILE · 2026</span>
+  </footer>
 
-</div>
-
-<footer>
-  <div class="wrap">
-    <p>© 2026 Pulse Care. All rights reserved.</p>
-    <p>Payments processed securely by PayPal. This device is intended for wellness monitoring and spot-check measurement, not for continuous patient monitoring or clinical diagnosis.</p>
-  </div>
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
